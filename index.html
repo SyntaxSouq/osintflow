@@ -19,39 +19,76 @@
       background: #fff;
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       text-align: center;
       max-width: 600px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
     h1 {
       color: #e63946;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #1d3557;
     }
     p {
       font-size: 16px;
       margin: 10px 0;
     }
-    a {
+    .contact a {
       color: #1d3557;
       text-decoration: none;
       font-weight: bold;
     }
-    a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
-    .contact {
-      margin-top: 20px;
-      font-size: 18px;
+    .button {
+      display: inline-block;
+      margin: 15px 10px 0 10px;
+      padding: 12px 25px;
+      background-color: #e63946;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .button.telegram {
+      background-color: #0088cc;
     }
     .footer {
       margin-top: 30px;
       font-size: 14px;
       color: #888;
     }
+    .countdown {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); color: #e63946; }
+      50% { transform: scale(1.05); color: #ff4d6d; }
+      100% { transform: scale(1); color: #e63946; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="countdown" id="countdown">⏳ Hurry! Make your offer soon!</div>
     <h1>osintflow.org</h1>
     <h2>🚀 Domain For Sale</h2>
     <p>If you are interested, please reach out:</p>
@@ -59,9 +96,39 @@
       📧 Email: <a href="mailto:hussnainraza619@gmail.com">hussnainraza619@gmail.com</a><br>
       💬 Telegram: <a href="https://t.me/SyntaxSouq" target="_blank">@SyntaxSouq</a>
     </div>
+    <!-- Action buttons -->
+    <a class="button" href="mailto:hussnainraza619@gmail.com?subject=Offer%20for%20osintflow.org&body=Hello,%20I%20am%20interested%20in%20buying%20osintflow.org.">💌 Make an Offer</a>
+    <a class="button telegram" href="https://t.me/SyntaxSouq" target="_blank">💬 Chat on Telegram</a>
     <div class="footer">
       Serious buyers only.
     </div>
   </div>
+
+  <script>
+    // Countdown timer (30 days from now)
+    const countdownElement = document.getElementById('countdown');
+    const saleEndDate = new Date();
+    saleEndDate.setDate(saleEndDate.getDate() + 30); // 30 days from now
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = saleEndDate - now;
+
+      if(diff <= 0) {
+        countdownElement.innerHTML = "⏳ Offer period has ended!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownElement.innerHTML = `⏳ Offer ends in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 </html>
