@@ -1,134 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>osintflow.org - Domain For Sale</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 600px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
-    }
-    .container:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    }
-    h1 {
-      color: #e63946;
-      margin-bottom: 5px;
-    }
-    h2 {
-      margin-top: 0;
-      color: #1d3557;
-    }
-    p {
-      font-size: 16px;
-      margin: 10px 0;
-    }
-    .contact a {
-      color: #1d3557;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    .button {
-      display: inline-block;
-      margin: 15px 10px 0 10px;
-      padding: 12px 25px;
-      background-color: #e63946;
-      color: #fff;
-      font-size: 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    .button.telegram {
-      background-color: #0088cc;
-    }
-    .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #888;
-    }
-    .countdown {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      animation: pulse 1.5s infinite;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>osintflow.org – Premium OSINT Domain For Sale</title>
+    <meta name="description" content="Premium domain for OSINT (Open Source Intelligence) platforms, tools, dashboards, and training. Buy osintflow.org – brandable, memorable, professional.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    @keyframes pulse {
-      0% { transform: scale(1); color: #e63946; }
-      50% { transform: scale(1.05); color: #ff4d6d; }
-      100% { transform: scale(1); color: #e63946; }
-    }
-  </style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            color: #f1f5f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Main card */
+        .card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            padding: 2rem 1.5rem;
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                padding: 3rem;
+            }
+        }
+
+        /* Header */
+        .domain {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            word-break: break-all;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .domain {
+                font-size: 3.5rem;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Price section */
+        .price-box {
+            background: #0f172a;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            border: 1px solid #334155;
+        }
+
+        .price-big {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #facc15;
+        }
+
+        .price-small {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-top: 0.5rem;
+        }
+
+        /* Grid layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .info-section {
+            background: #1e293b;
+            padding: 1.25rem;
+            border-radius: 1rem;
+        }
+
+        .info-section h3 {
+            color: #38bdf8;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-section li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .info-section li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Contact buttons */
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: scale(1.02);
+        }
+
+        .btn-secondary {
+            background: #334155;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #475569;
+        }
+
+        .btn-outline {
+            border: 1px solid #facc15;
+            color: #facc15;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #facc15;
+            color: #0f172a;
+        }
+
+        /* Trust signals */
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        hr {
+            border-color: #334155;
+            margin: 1.5rem 0;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="countdown" id="countdown">⏳ Hurry! Make your offer soon!</div>
-    <h1>osintflow.org</h1>
-    <h2>🚀 Domain For Sale</h2>
-    <p>If you are interested, please reach out:</p>
-    <div class="contact">
-      📧 Email: <a href="mailto:hussnainraza619@gmail.com">hussnainraza619@gmail.com</a><br>
-      💬 Telegram: <a href="https://t.me/SyntaxSouq" target="_blank">@SyntaxSouq</a>
+<div class="container">
+    <div class="card">
+
+        <!-- Header -->
+        <div style="text-align: center;">
+            <span class="badge">🔥 Premium OSINT Domain</span>
+            <div class="domain">osintflow.org</div>
+            <p style="margin-top: 1rem; font-size: 1.1rem;">Open Source Intelligence • Data Flow • Threat Intel</p>
+        </div>
+
+        <!-- PRICE BOX (replaces fake timer) -->
+        <div class="price-box">
+            <div class="price-big">$1,250 USD</div>
+            <div class="price-small">Buy It Now • or offer from $200</div>
+            <div style="margin-top: 0.75rem; font-size: 0.85rem;">✅ One payment. Domain is yours forever.</div>
+        </div>
+
+        <!-- TWO COLUMN VALUE PROPOSITION -->
+        <div class="grid-2">
+            <div class="info-section">
+                <h3>📡 Why osintflow.org?</h3>
+                <ul>
+                    <li>OSINT is a $10B+ industry (cybersecurity, investigations, journalism)</li>
+                    <li>"Flow" = real-time data, dashboards, intelligence streams</li>
+                    <li>Short, brandable, easy to pronounce</li>
+                    <li>.org adds trust for open-source & community projects</li>
+                    <li>Clean history – never used for spam or SEO abuse</li>
+                </ul>
+            </div>
+            <div class="info-section">
+                <h3>🎯 Perfect for:</h3>
+                <ul>
+                    <li>OSINT dashboard / SaaS platform</li>
+                    <li>Threat intelligence newsletter or feed</li>
+                    <li>Training & certification hub</li>
+                    <li>Open-source tool repository</li>
+                    <li>Investigator blog or podcast</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TRUST + ESCROW -->
+        <div class="trust-row">
+            <span>🔒 Escrow.com accepted</span>
+            <span>⚡ Transfer within 24h</span>
+            <span>📜 Free 1-year renewal included</span>
+            <span>🔄 Refund if transfer fails</span>
+        </div>
+
+        <hr>
+
+        <!-- CONTACT SECTION (replaces old "Serious buyers only") -->
+        <h3 style="text-align: center; margin-bottom: 1rem;">📬 How to buy or make an offer</h3>
+        
+        <div class="contact-buttons">
+            <a href="mailto:hussnainraza619@gmail.com?subject=Offer%20for%20osintflow.org&body=Hello,%20I'm%20interested%20in%20osintflow.org.%20My%20offer%20is%20%24______" class="btn btn-primary">
+                ✉️ Email an offer – hussnainraza619@gmail.com
+            </a>
+            <a href="https://t.me/SyntaxSouq" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                💬 Telegram: @SyntaxSouq (fastest reply)
+            </a>
+            <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" class="btn btn-outline">
+                📝 Or use secure offer form (no account needed)
+            </a>
+        </div>
+
+        <!-- EXPLANATION OF PROCESS -->
+        <div style="background: #0f172a; padding: 1rem; border-radius: 1rem; margin-top: 1rem;">
+            <p style="font-size: 0.9rem; text-align: center;">
+            ✅ <strong>How it works:</strong> You offer → we agree → I send Dan.com or Escrow.com invoice → you pay securely → I push domain to your registrar within 24h.<br>
+            💳 I accept: Bank transfer, Wise, Crypto, or any escrow service you prefer.
+            </p>
+        </div>
+
+        <hr>
+
+        <!-- TRANSPARENCY: RENEWAL DATE -->
+        <div style="font-size: 0.8rem; text-align: center; color: #94a3b8;">
+            📅 Next renewal: check at any registrar – typically ~$15/year for .org<br>
+            🕒 I respond to all messages within 12 hours (often 2–3h)
+        </div>
+
+        <div class="footer-note">
+            © osintflow.org – domain listed for sale by owner. No brokers, no hidden fees.
+        </div>
     </div>
-    <!-- Action buttons -->
-    <a class="button" href="mailto:hussnainraza619@gmail.com?subject=Offer%20for%20osintflow.org&body=Hello,%20I%20am%20interested%20in%20buying%20osintflow.org.">💌 Make an Offer</a>
-    <a class="button telegram" href="https://t.me/SyntaxSouq" target="_blank">💬 Chat on Telegram</a>
-    <div class="footer">
-      Serious buyers only.
-    </div>
-  </div>
-
-  <script>
-    // Countdown timer (30 days from now)
-    const countdownElement = document.getElementById('countdown');
-    const saleEndDate = new Date();
-    saleEndDate.setDate(saleEndDate.getDate() + 30); // 30 days from now
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = saleEndDate - now;
-
-      if(diff <= 0) {
-        countdownElement.innerHTML = "⏳ Offer period has ended!";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      countdownElement.innerHTML = `⏳ Offer ends in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+</div>
 </body>
 </html>
